@@ -97,7 +97,7 @@
                     android:drawablePadding="5dp"
                     android:inputType="textPassword"
                     android:drawableStart="@drawable/password"
-                    android:drawableLeft="@drawable/password"
+
                     android:hint="@string/password"/>
 
 
