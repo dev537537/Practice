@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.liraxupdate.fragments.loginstuff.loginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+
+        <action
+            android:id="@+id/action_loginFragment_to_forgot_password"
+            app:destination="@id/forgot_password" />
+        <action
+            android:id="@+id/action_loginFragment_to_usernameFragment"
+            app:destination="@id/usernameFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/usernameFragment"
+        android:name="com.example.liraxupdate.fragments.loginstuff.UsernameFragment"
+        android:label="fragment_username"
+        tools:layout="@layout/fragment_username" />
+    <fragment
+        android:id="@+id/forgot_password"
+        android:name="com.example.liraxupdate.fragments.loginstuff.forgot_password"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" />
+</navigation>

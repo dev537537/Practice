@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signup_navigation"
+    app:startDestination="@id/signUpFragment">
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.liraxupdate.fragments.Signupstuff.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_privateUserFragment"
+            app:destination="@id/privateUserFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_companyAssociationFragment"
+            app:destination="@id/companyAssociationFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_institutionFragment"
+            app:destination="@id/institutionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/privateUserFragment"
+        android:name="com.example.liraxupdate.fragments.Signupstuff.PrivateUserFragment"
+        android:label="PrivateUserFragment" />
+    <fragment
+        android:id="@+id/companyAssociationFragment"
+        android:name="com.example.liraxupdate.fragments.Signupstuff.CompanyAssociationFragment"
+        android:label="fragment_company_association"
+        tools:layout="@layout/fragment_company_association" />
+    <fragment
+        android:id="@+id/institutionFragment"
+        android:name="com.example.liraxupdate.fragments.Signupstuff.InstitutionFragment"
+        android:label="fragment_institution"
+        tools:layout="@layout/fragment_institution" />
+</navigation>
