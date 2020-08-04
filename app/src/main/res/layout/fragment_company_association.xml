@@ -1,282 +1,309 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/background"
-    tools:context=".fragments.Signupstuff.CompanyAssociationFragment">
-    <androidx.constraintlayout.widget.ConstraintLayout
+    >
+    <data>
+        <variable
+            name="companymodel"
+            type="com.example.liraxupdate.viewmodels.SharedViewModelSignUp" />
+
+    </data>
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
 
-
-
-    <ImageView
-        android:id="@+id/main_signupt_company_logo"
-        android:layout_width="277dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="40dp"
-        android:src="@drawable/mainlogo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.591"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="30dp"
-        android:background="#fff"
-        android:layout_marginBottom="10dp"
-        app:cardCornerRadius="10dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_signupt_company_logo">
-
-        <LinearLayout
+        android:background="@drawable/background"
+        tools:context=".fragments.Signupstuff.CompanyAssociationFragment">
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-
-            android:orientation="vertical">
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawablePadding="5dp"
-                    android:drawableLeft="@drawable/safe"
-                    android:hint="@string/auth_text"/>
+            android:paddingBottom="10dp"
+            android:layout_height="match_parent">
 
 
-            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawablePadding="5dp"
-                    android:drawableLeft="@drawable/usernametwo"
-                    android:hint="@string/first_name"/>
+            <ImageView
+                android:id="@+id/main_signupt_company_logo"
+                android:layout_width="277dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="40dp"
+                android:src="@drawable/mainlogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.591"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawablePadding="5dp"
-                    android:drawableLeft="@drawable/usernametwo"
-                    android:hint="@string/last_name"/>
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                app:passwordToggleEnabled="true"
-                android:layout_height="wrap_content">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawablePadding="5dp"
-                    android:inputType="textPassword"
-                    android:drawableStart="@drawable/password"
-
-                    android:hint="@string/password"/>
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawablePadding="5dp"
-                    android:drawableLeft="@drawable/gmail"
-                    android:hint="@string/email"/>
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawablePadding="5dp"
-                    android:drawableLeft="@drawable/company"
-                    android:hint="@string/company_name_text"/>
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <RelativeLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingStart="5dp"
-                android:paddingBottom="10dp"
-                android:paddingEnd="10dp"
-                >
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginEnd="30dp"
+                android:background="#fff"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
 
-                <CheckBox
-                    android:id="@+id/checkbox_id"
-                    android:layout_width="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/main_signupt_company_logo">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
 
-                    />
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/safe"
+                            android:drawablePadding="5dp"
+                            android:hint="@string/auth_text"
+                            android:text="@={companymodel.auth_number}" />
 
 
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/usernametwo"
+                            android:drawablePadding="5dp"
+                            android:hint="@string/first_name"
+                            android:text="@={companymodel.first_name}" />
 
 
-                <TextView
-                    android:id="@+id/checkboxtextfirst_id"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="1dp"
-                    android:textColor="@color/hint_color"
-                    android:layout_toRightOf="@+id/checkbox_id"
-                    android:fontFamily="@font/open_sans_semibold"
-                    android:text="@string/accept"
-                    android:textSize="9sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
-                <TextView
-                    android:id="@+id/term_text"
-                    style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
-                    android:layout_toRightOf="@+id/checkboxtextfirst_id"
-                    android:text="@string/terms"
-                    android:textAllCaps="false"
-                    android:fontFamily="@font/open_sans_semibold"
-                    android:textColor="@color/conditon_color"
-                    android:textSize="9sp" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/andtext_id"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_toRightOf="@+id/term_text"
-                    android:text="@string/and"
-                    android:fontFamily="@font/open_sans_semibold"
-                    android:textColor="@color/hint_color"
-                    android:textSize="9sp" />
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/usernametwo"
+                            android:drawablePadding="5dp"
+                            android:hint="@string/last_name"
+                            android:text="@={companymodel.last_name}" />
 
-                <TextView
-                    android:id="@+id/privacy_text"
-                    style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
-                    android:layout_toRightOf="@+id/andtext_id"
-                    android:text="@string/Privcy"
-                    android:textAllCaps="false"
-                    android:fontFamily="@font/open_sans_semibold"
-                    android:textColor="@color/conditon_color"
-                    android:textSize="9sp" />
 
-                <TextView
-                    android:id="@+id/andtexttwo_id"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_toRightOf="@+id/privacy_text"
-                    android:fontFamily="@font/open_sans_semibold"
-                    android:textColor="@color/hint_color"
-                    android:text="@string/and"
-                    android:textSize="9sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
-                <TextView
-                    android:id="@+id/cooking_text"
-                    style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/checkboxtextfirst_id"
-                    android:layout_marginStart="10dp"
-                    android:layout_toRightOf="@+id/checkbox_id"
-                    android:text="@string/cooking"
-                    android:textAllCaps="false"
-                    android:textColor="@color/conditon_color"
-                    android:fontFamily="@font/open_sans_semibold"
-                    android:textSize="9sp" />
-            </RelativeLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:passwordToggleEnabled="true">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:background="@drawable/signupbtnbackground"
-                android:text="@string/signu_text"
-                android:fontFamily="@font/open_sans_bold"
-                android:textColor="@color/white"
-                android:shadowColor="@color/shadow_color"
-                android:textSize="20dp" />
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/password"
+                            android:drawablePadding="5dp"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"
-                android:orientation="horizontal">
+                            android:text="@={companymodel.password}" />
 
-                <Button
-                    android:id="@+id/canclebtn"
-                    android:layout_width="120dp"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:background="@drawable/signupbtnbackground"
-                    android:backgroundTint="@color/cancle_btn"
-                    android:fontFamily="@font/open_sans_bold"
-                    android:text="@string/canel"
-                    android:textColor="@color/white" />
 
-                <TextView
-                    android:id="@+id/passwordforgot"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:fontFamily="@font/open_sans_semibold"
-                    android:text="@string/password_frogot"
-                    android:textColor="#3AA8FB" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="3dp"
-                    android:fontFamily="@font/open_sans_semibold"
-                    android:layout_toLeftOf="@id/passwordforgot"
-                    android:text="@string/forgot" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-            </RelativeLayout>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/gmail"
+                            android:drawablePadding="5dp"
+                            android:hint="@string/email"
+                            android:text="@={companymodel.email}" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/company"
+                            android:drawablePadding="5dp"
+                            android:hint="@string/company_name_text"
+                            android:text="@={companymodel.company_name}" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="5dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp">
+
+                        <CheckBox
+                            android:id="@+id/checkbox_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="1dp"
+
+                            />
+
+
+                        <TextView
+                            android:id="@+id/checkboxtextfirst_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_toRightOf="@+id/checkbox_id"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:text="@string/accept"
+                            android:textColor="@color/hint_color"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/term_text"
+                            style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_toRightOf="@+id/checkboxtextfirst_id"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:text="@string/terms"
+                            android:textAllCaps="false"
+                            android:textColor="@color/conditon_color"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/andtext_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_toRightOf="@+id/term_text"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:text="@string/and"
+                            android:textColor="@color/hint_color"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/privacy_text"
+                            style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_toRightOf="@+id/andtext_id"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:text="@string/Privcy"
+                            android:textAllCaps="false"
+                            android:textColor="@color/conditon_color"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/andtexttwo_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_toRightOf="@+id/privacy_text"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:text="@string/and"
+                            android:textColor="@color/hint_color"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/cooking_text"
+                            style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/checkboxtextfirst_id"
+                            android:layout_marginStart="10dp"
+                            android:layout_toRightOf="@+id/checkbox_id"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:text="@string/cooking"
+                            android:textAllCaps="false"
+                            android:textColor="@color/conditon_color"
+                            android:textSize="9sp" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/signupbtnbackground"
+                        android:fontFamily="@font/open_sans_bold"
+                     android:onClick="@{companymodel::companyregister}"
+                        android:shadowColor="@color/shadow_color"
+                        android:text="@string/signu_text"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/canclebtn"
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:onClick="@{companymodel::gotologin}"
+                            android:background="@drawable/signupbtnbackground"
+                            android:backgroundTint="@color/cancle_btn"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:text="@string/canel"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/passwordforgot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:text="@string/password_frogot"
+                            android:textColor="#3AA8FB" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="3dp"
+                            android:layout_toLeftOf="@id/passwordforgot"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:text="@string/forgot" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

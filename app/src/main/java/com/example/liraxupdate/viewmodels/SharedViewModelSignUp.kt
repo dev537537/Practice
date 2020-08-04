@@ -23,11 +23,13 @@ class SharedViewModelSignUp : ViewModel()
     }
     fun companyregister(view: View)
     {
-
+        val intent = Intent(view.context,DashboardActivity::class.java)
+        view.context.startActivity(intent)
     }
     fun institutregister(view: View)
     {
-
+        val intent = Intent(view.context,DashboardActivity::class.java)
+        view.context.startActivity(intent)
     }
     fun gotologin(view: View)
     {

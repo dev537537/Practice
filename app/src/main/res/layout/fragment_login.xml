@@ -291,10 +291,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/dont_account_text"
-                            android:maxLines="1"
+
                             android:fontFamily="@font/open_sans_semibold"
                             android:textColor="@color/black"
-                            android:autoSizeMaxTextSize="10sp" />
+                            android:autoSizeMaxTextSize="8sp" />
 
                         <TextView
                             android:id="@+id/login_signup"
@@ -329,9 +329,9 @@
                             android:layout_height="wrap_content"
                             android:text="@string/problem"
                             android:textColor="@color/black"
-                            android:maxLines="1"
+
                             android:layout_gravity="center_horizontal"
-                            android:autoSizeMaxTextSize="10sp"
+                            android:autoSizeMaxTextSize="8sp"
                             android:fontFamily="@font/open_sans_semibold"
                             />
 

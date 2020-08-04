@@ -23,10 +23,24 @@
         android:id="@+id/usernameFragment"
         android:name="com.example.liraxupdate.fragments.loginstuff.UsernameFragment"
         android:label="fragment_username"
-        tools:layout="@layout/fragment_username" />
+        tools:layout="@layout/fragment_username" >
+        <action
+            android:id="@+id/action_usernameFragment_to_forgot_password"
+            app:destination="@id/forgot_password" />
+        <action
+            android:id="@+id/action_usernameFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/forgot_password"
         android:name="com.example.liraxupdate.fragments.loginstuff.forgot_password"
         android:label="fragment_forgot_password"
-        tools:layout="@layout/fragment_forgot_password" />
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgot_password_to_usernameFragment"
+            app:destination="@id/usernameFragment" />
+        <action
+            android:id="@+id/action_forgot_password_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
 </navigation>

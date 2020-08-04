@@ -37,7 +37,7 @@ class Splash_Screen : AppCompatActivity() {
                 val intnet = Intent(applicationContext,LogInActivity::class.java)
                 startActivity(intnet)
                 finish()
-            },5000
+            },3000
         )
     }
 }
