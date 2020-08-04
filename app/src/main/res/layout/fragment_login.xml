@@ -186,6 +186,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:onClick="@{loginframodel::movetoforgot}"
                             android:id="@+id/login_forgot_password_btn"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="5dp"
@@ -199,6 +200,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:onClick="@{loginframodel::movetoDashboard}"
                     android:background="@drawable/signupbtnbackground"
                     android:fontFamily="@font/open_sans_bold"
                     android:shadowColor="@color/shadow_color"
@@ -225,7 +227,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-
+                        android:onClick="@{loginframodel::moveusernmae}"
                         android:layout_toRightOf="@+id/forgot"
                         android:fontFamily="@font/open_sans_semibold"
                         android:text="@string/username"
@@ -340,6 +342,7 @@
                             android:layout_marginStart="1dp"
                             android:text="@string/contact_text"
                             android:layout_gravity="center"
+                            android:onClick="@{loginframodel::openemail}"
                             android:fontFamily="@font/open_sans_semibold"
                             android:textColor="@color/conditon_color"
                             android:autoSizeMaxTextSize="12sp"/>

@@ -20,14 +20,14 @@ import kotlinx.android.synthetic.main.fragment_login.*
 
 
 class loginFragment : Fragment() {
-       lateinit var binding: FragmentLoginBinding
+
     lateinit var viewModel: LoginViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-         binding =
+     val     binding : FragmentLoginBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
         binding.loginframodel= viewModel
@@ -36,33 +36,6 @@ class loginFragment : Fragment() {
 
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding.loginUsernameBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_usernameFragment)
-        }
-        login_username_btn.setOnClickListener {
 
-        }
-
-
-        login_forgot_password_btn.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_forgot_password)
-        }
-        login_button.setOnClickListener {
-            val intent = Intent(view.context,DashboardActivity::class.java)
-            startActivity(intent)
-        }
-        login_contact.setOnClickListener {
-            val intent = Intent(Intent.ACTION_SEND)
-            intent.data = Uri.parse("mailto:")
-            intent.type = "text/plain"
-
-            intent.putExtra(Intent.EXTRA_SUBJECT, "Subject:")
-
-            intent.putExtra(Intent.EXTRA_TEXT, "Message body:")
-            startActivity(Intent.createChooser(intent, "Choose Email Client..."))
-        }
-    }
 
 }
